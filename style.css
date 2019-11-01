@@ -1,0 +1,501 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Fonts */
+@font-face {
+  font-family: 'HeyAugust';
+  src: url('font/HeyAugust.eot?#iefix') format('embedded-opentype'), 
+       url('font/HeyAugust.otf')  format('opentype'),
+       url('font/HeyAugust.woff') format('woff'), 
+       url('font/HeyAugust.ttf')  format('truetype'), 
+       url('font/HeyAugust.svg#HeyAugust') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Black';
+  src: url('font/public-sans/PublicSans-Black.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-BlackItalic';
+  src: url('font/public-sans/PublicSans-BlackItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-BlackItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Bold';
+  src: url('font/public-sans/PublicSans-Bold.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-BoldItalic';
+  src: url('font/public-sans/PublicSans-BoldItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-BoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-ExtraBold';
+  src: url('font/public-sans/PublicSans-ExtraBold.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-ExtraBoldItalic';
+  src: url('font/public-sans/PublicSans-ExtraBoldItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-ExtraBoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-ExtraLight';
+  src: url('font/public-sans/PublicSans-ExtraLight.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-ExtraLightItalic';
+  src: url('font/public-sans/PublicSans-ExtraLightItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-ExtraLightItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Italic';
+  src: url('font/public-sans/PublicSans-Italic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Light';
+  src: url('font/public-sans/PublicSans-Light.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-LightItalic';
+  src: url('font/public-sans/PublicSans-LightItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-LightItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Medium';
+  src: url('font/public-sans/PublicSans-Medium.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-MediumItalic';
+  src: url('font/public-sans/PublicSans-MediumItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Regular';
+  src: url('font/public-sans/PublicSans-Regular.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-SemiBold';
+  src: url('font/public-sans/PublicSans-SemiBold.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-SemiBoldItalic';
+  src: url('font/public-sans/PublicSans-SemiBoldItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-SemiBoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-Thin';
+  src: url('font/public-sans/PublicSans-Thin.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-Thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans-ThinItalic';
+  src: url('font/public-sans/PublicSans-ThinItalic.woff2') format('woff2'),
+       url('font/public-sans/PublicSans-ThinItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  width: 100%;
+}
+
+
+/* Styles */
+body {
+  background: #333;
+	color: white;
+	font-family: 'PublicSans-Light', helvetica, arial, sans-serif;
+  font-size: 1.15rem;
+}
+section {
+  line-height: 1.5rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'PublicSans-Bold', helvetica, arial, sans-serif;
+}
+h6, em {
+  font-family: 'PublicSans-SemiBold', helvetica, arial, sans-serif; 
+  font-weight: bold;
+}
+article, header {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+/* LOGO */
+header {
+  text-align: center;
+  margin-top: 2rem;
+}
+h1.logo {
+  font-family: 'HeyAugust', helvetica, arial, sans-serif;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* TOP NAV */
+nav.menu-mobile {
+  display: none;
+}
+nav.menu-desktop {
+  display: block;
+  padding-top: 1rem;
+}
+nav {
+  border-bottom: 2px solid #333;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid white;
+}
+nav li {
+  font-family: 'PublicSans-Bold', helvetica, arial, sans-serif !important;
+  font-size: 1.15rem;
+}
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  font-family: helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+nav.menu-desktop li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.heroshot {
+  background-image: url('img/sample3.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+.heroshot:before {
+  content: '';
+  float: left;
+  padding-bottom: 40%;
+}
+.heroshot:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+section {
+  border-top: 1px solid white;
+}
+section h1 {
+  font-size: 2.15rem;
+  margin-bottom: .5rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+/* ADDRESS */
+section#address {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-top: 0;
+}
+#address div {
+  margin-bottom: 1rem;
+}
+#address strong {
+  display: block;
+  line-height: 3rem;
+}
+
+/* MENU */
+.two-columns li {
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+.two-columns {
+  width: 100%;
+  overflow: hidden;
+}
+ul.two-columns, ul.single-column {
+  margin-bottom: 3rem;
+}
+.two-columns li, #address div {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+}
+.two-columns li:nth-child(odd) {
+  clear: both;
+}
+.two-columns h6 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-weight: normal;
+  font-family: 'PublicSans-Bold', helvetica, sans-serif;
+  /*border-top: 1px dotted #888;*/
+  padding-top: .5rem;
+}
+.two-columns li .name {
+  width: 84%;
+  /*min-height: 3rem;*/
+  margin-bottom: .5rem;
+}
+.two-columns li .price {
+  width: 10%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.two-columns li p {
+  font-family: 'PublicSans-ExtraLight', helvetica, sans-serif;
+  width: 81%;
+}
+.general-prices h6 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+.general-prices {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  /*border-left: 1px solid white;*/
+}
+.general-prices strong {
+  margin-right: .5rem;
+}
+.general-prices span {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.single-column .name {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 23rem;
+}
+
+
+/* FOOTER */
+footer {
+  font-size: .8rem;
+  margin-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 3.25vw;
+  }
+  header, h1.logo {
+    text-align: left;
+  }
+  h1.logo {
+    font-size: 17.5vw;
+  }
+  nav.menu-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 1.5vw;
+    padding-top: 1.5vw;
+    margin-bottom: .75vw;
+    padding-bottom: .75vw;
+  }
+  nav.menu-desktop {
+    display: none;
+  }
+  nav ul li {
+    display: block; 
+    width: 100%;
+    line-height: 6vw;
+    font-size: 3.5vw;
+  }
+  .heroshot:before {
+    content: '';
+    float: left;
+    padding-bottom: 80%;
+  }
+  section {
+    line-height: 4vw;
+  }
+  section h1 {
+   font-size: 5.5vw;
+  }
+  section h2 {
+   font-size: 4.7vw; 
+  }
+  article {
+    width: 100%;
+  }
+  #address strong {
+    line-height: 4.5vw;
+  }
+  .two-columns h6 {
+    font-size: 3.35vw;
+    padding-bottom: .75vw;
+  }
+  .two-columns li .name {
+    min-height: 0;
+    margin-bottom: .7vw;
+  }
+  .two-columns li, #address div {
+    float: none;
+    width: 100%;
+  }
+  .two-columns p {
+    max-width: 80%;
+  }
+  .single-column .name {
+    margin-right: 1rem;
+    display: inline-block;
+    width: auto;
+  }
+  .single-column .price {
+    float: right;
+    width: 13%;
+    display: inline-block;
+  }
+  footer {
+    font-size: 2.75vw;
+  }
+}
+
+
+
+
+
+/* INLINE */
+.no-wrap {
+  white-space: nowrap;
+}
+.non-bold {
+  font-family: 'PublicSans-Light', helvetica, arial, sans-serif !important;
+}
+strong {
+  font-family: 'PublicSans-Bold', helvetica, arial, sans-serif !important;
+}
+.border-top {
+  border-top: 1px solid white;
+  position: relative;
+}
+ul.bullets {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+a.link {
+  border-bottom: 1px dotted #aaa;
+}
