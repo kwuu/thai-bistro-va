@@ -401,6 +401,9 @@ footer {
     float: left;
     padding-bottom: 30%;
   }
+  h1.logo {
+    font-size: 10rem;
+  }
 }
 
 /* Mobile */
