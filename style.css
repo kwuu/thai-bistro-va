@@ -256,7 +256,7 @@ nav.menu-desktop li {
   margin-right: 1rem;
 }
 .heroshot {
-  background-image: url('img/marquee.jpg');
+  background-image: url('img/marquee-xl.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -394,7 +394,14 @@ footer {
 
 
 
-
+/* XL Desktop */
+@media screen and (min-width: 1710px) {
+  .heroshot:before {
+    content: '';
+    float: left;
+    padding-bottom: 30%;
+  }
+}
 
 /* Mobile */
 @media screen and (max-width: 900px) {
