@@ -194,9 +194,13 @@ body {
 section {
   line-height: 1.5rem;
 }
-a {
+a, a:link, a:visited {
   color: white;
   text-decoration: none;
+  transition: all 0.25s;
+}
+a:hover {
+  color: #ccc;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'PublicSans-Bold', helvetica, arial, sans-serif;
