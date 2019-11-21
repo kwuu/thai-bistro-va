@@ -260,11 +260,7 @@ nav.menu-desktop li {
   margin-right: 1rem;
 }
 .heroshot {
-  background-image: url('img/marquee-xl.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 1rem;
+  position: relative;
 }
 .heroshot:before {
   content: '';
@@ -275,6 +271,30 @@ nav.menu-desktop li {
   content: '';
   display: table;
   clear: both;
+}
+.slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: all 1s;
+}
+.slide:nth-of-type(1) {
+  background-image: url('img/marquee-xl.jpg');
+}
+.slide:nth-of-type(2) {
+  background-image: url('img/marquee2-xl.jpg');
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
 }
 section {
   border-top: 1px solid white;
