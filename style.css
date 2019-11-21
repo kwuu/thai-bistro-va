@@ -415,9 +415,6 @@ footer {
   body {
     font-size: 3.25vw;
   }
-  header, h1.logo {
-    text-align: left;
-  }
   h1.logo {
     font-size: 17.5vw;
   }
